@@ -24,11 +24,12 @@ LibreNMS是一套開源的網路裝置管理軟體，其分支於Observium，並
     sh Librenms-Install-Shell/Centos7_install.sh
   
 #### Ubuntu 16.04 以上
-  
+##### 20220306 因為官方還沒將php 7.4的package加入ubuntu 21.10，所以建議使用20.04  
     sh Librenms-Install-Shell/ubuntu_install.sh
-
+    timedatectl set-timezone "Asia/Taipei"
+    service mysqld restart
 ### Step 3:
-開啟瀏覽器連至：http://YourIP/install.php ,根據內容進行相關設定(如DB Password、DB Name)。
+開啟瀏覽器連至：http://YourIP/install ,根據內容進行相關設定(如DB Password、DB Name)。
 
 ### Step 4:
 將Step所顯示的config.php文件寫入至/opt/librenms/config.php
